@@ -7,5 +7,6 @@ public class PlayerHealth : MonoBehaviour
     public void HealDamage(int healAmount)
     {
         _health += healAmount;
+        Debug.Log($"Zebrano Hp potke. Dodano zdrowie : {healAmount}");
     }
 }

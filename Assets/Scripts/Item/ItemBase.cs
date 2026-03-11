@@ -13,6 +13,11 @@ public abstract class ItemBase : MonoBehaviour,ICollectable{
     public void Collect(GameObject player){
         PerformAction(player);
         Destroy(gameObject);
-
+    }
+    
+    private void OnTriggerEnter(Collider collision) {
+        if (collision.CompareTag("Player")) {
+            Collect(collision.gameObject);
+        }
     }
 }
