@@ -4,5 +4,4 @@ using UnityEngine;
 public class ItemSO : ScriptableObject{
     public Type type;
     public int amount;
-    public int id;
 }
