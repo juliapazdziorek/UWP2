@@ -4,9 +4,9 @@ public class PlayerHealth : MonoBehaviour
 {
     private int _health = 100;
 
-    public void Heal(int healAmount)
+    public void HealDamage(int healAmount)
     {
         _health += healAmount;
-        Debug.Log($"Leczenie o {healAmount}. Aktualne HP: {_health}");
+        Debug.Log($"Zebrano Hp potke. Dodano zdrowie : {healAmount}");
     }
 }
