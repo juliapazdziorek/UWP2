@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
 
 public interface IInteractible{
-    void Interact(GameObject player);
+    void OnInteract(PlayerContext player);
 }

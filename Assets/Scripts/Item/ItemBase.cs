@@ -6,7 +6,7 @@ public enum Type{
     HealthPotion
 }
 
-public abstract class ItemBase : MonoBehaviour,IInteractible{
+public abstract class ItemBase : MonoBehaviour,ICollectable{
     public ItemSO itemData;
     public abstract void PerformAction(GameObject player);
 
@@ -17,7 +17,7 @@ public abstract class ItemBase : MonoBehaviour,IInteractible{
     
     private void OnTriggerEnter(Collider collision) {
         if (collision.CompareTag("Player")) {
-            Interact(collision.gameObject);
+            Collect(collision.gameObject);
         }
     }
 }
