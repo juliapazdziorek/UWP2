@@ -1,23 +1,17 @@
 using UnityEngine;
 
-public enum Type{
-    Coin,
-    Key,
-    HealthPotion
-}
-
 public abstract class ItemBase : MonoBehaviour,ICollectable{
     public ItemSO itemData;
-    public abstract void PerformAction(GameObject player);
 
-    public void Collect(GameObject player){
+    protected abstract void PerformAction(PlayerContext player);
+
+    public void Collect(PlayerContext player)
+    {
         PerformAction(player);
-        Destroy(gameObject);
-    }
-    
-    private void OnTriggerEnter(Collider collision) {
-        if (collision.CompareTag("Player")) {
-            Collect(collision.gameObject);
+        if (player.inventory != null)
+        {
+            player.inventory.AddItemData(itemData);
         }
+        Destroy(gameObject);
     }
 }

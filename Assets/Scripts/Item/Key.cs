@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class Key : ItemBase {
 
-    public override void PerformAction(GameObject player){
-        if (player.TryGetComponent(out Inventory inventory)){
-            inventory.AddKeys(itemData.amount);
-        }
+    protected override void PerformAction(PlayerContext player){
+        player.inventory?.AddKeys(itemData.amount);
     }
 }

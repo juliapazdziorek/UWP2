@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3f0331ffa106343b71882513bcdd53, type: 3}
   m_Name: KeyData
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  type: 0
-  amount: 0
+  itemName: key
+  amount: 1
