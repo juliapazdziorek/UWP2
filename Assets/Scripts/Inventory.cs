@@ -16,7 +16,7 @@ public class Inventory : MonoBehaviour
     public void AddCoins(int amount)
     {
         Coins += amount;
-        Debug.Log($"Zebrano monety. Pula monet: {Coins}")
+        Debug.Log($"Zebrano monety. Pula monet: {Coins}");
     }
     
 }
